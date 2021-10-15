@@ -25,3 +25,24 @@
     .ex-4-square {
         transition: 2s;
     }
+
+/* .ex-5-square:hover { In questo modo sposta tutto, mantiene il margin
+    height: 100px;      e il risultato non è uguale al "index.html"
+    width: 100px;       (Le grandezze le ho cercate nel "style.css")
+}
+.ex-5-square:active {
+    height: 60px;
+    width: 60px;
+}
+    .ex-5-square {
+        transition: 2s;
+    } */
+    .ex-5-square:hover {        /* Ho sbirciato perché non conoscevo */
+        transform: scale(3);    /* "scale()". Interessante il fatto  */ 
+    }                           /* che "scale(3) - (height, width)"  */
+    .ex-5-square:active {       /* esce dal flusso                   */
+        transform: scale(.5);
+    }
+        .ex-5-square {
+            transition: 1s;
+        }
