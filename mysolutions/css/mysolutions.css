@@ -89,4 +89,38 @@
         0% {transform: rotate(0deg));}      /*     0% {transform: rotate(270deg));} */
         75% {transform: rotate(270deg);}    /* } */   
     }                                       
-    
+
+/* Avevo calcolato bene le grandezze (guardando lo "style.css"), ma non avevo ben chiaro come mettere le percentuali. Quindi ho guardato la soluzione. Grazie a questo esercizio ora è tutto più chiaro */
+.ex-12-button:hover .ex-12-top-white {
+    /* Nome dell'animazione - durata totale - modo dell'animazione */
+    animation: moveTopWhite 2s linear;
+}
+@keyframes moveTopWhite {
+    /* Quando l'animazione è al 0% (== inizio) --> devi essere spostato da sx del 10% della lunghezza del tuo contenitore (ex-12-button). Questo per evitare che l'animazione parta da un punto indesiderato. Infatti le proprietà del 0% == proprietà sul posizionamento dell'elemento stesso */
+    0% {
+        left: 10%;
+    }
+    /* Quando l'animazione è al 50% (1s) --> devi essere a "left: calc(100% - 60px);" (60px == width) */
+    50% {
+        left: calc(100% - 60px);
+    }
+    /* Quando l'animazione è al 100% (finita) --> devi essere a left: "10%;" == posizione iniziale. */
+    100% {
+        left: 10%;
+    }
+    /* Non bisogna pensare "Fino al 25% devi spostarti di 50px a dx", ma bisogna pensare "Al 25% dell'animazione voglio l'elemento alla posizione "left = 50px"; */
+}
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: moveBottomWhite 2s linear;
+}
+@keyframes moveBottomWhite {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: calc(100% - 60px);
+    }
+    100% {
+        right: 20%;
+    }
+}
