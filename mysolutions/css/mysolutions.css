@@ -74,3 +74,10 @@
     .ex-9-img {
         transition: 2s;
     }
+
+.ex-10-icon {
+    animation: girocompleto 1s linear infinite;
+}
+    @keyframes girocompleto {
+        0% {transform: rotate(360deg);}
+    }
