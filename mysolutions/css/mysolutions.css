@@ -57,3 +57,11 @@
     .ex-7-img {
         transition: 2s;
     }
+
+.ex-8-img:hover {
+    filter: grayscale(60%) sepia(40%);
+    border-radius: 20px;
+}
+    .ex-8-img {
+        transition: 2s;
+    }
